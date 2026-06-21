@@ -39,7 +39,8 @@ export default function AppLayout({ children }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.25, ease: 'easeOut' }}
-          style={{ flex: 1, padding: '1.75rem', overflow: 'auto' }}
+          style={{ flex: 1, padding: '1.75rem', overflow: 'auto', minWidth: 0 }}
+          className="app-main-content"
         >
           {children}
         </motion.main>

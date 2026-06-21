@@ -204,3 +204,10 @@
     color: var(--text-muted);
   }
 }
+
+/* ── Mobile responsiveness ── */
+@media (max-width: 768px) {
+  .app-main-content {
+    padding-top: 4rem !important; /* clear the fixed hamburger button */
+  }
+}
