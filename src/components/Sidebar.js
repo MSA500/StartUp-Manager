@@ -163,30 +163,48 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* ── Hamburger button — mobile only ── */}
-      <button
-        onClick={() => setMobileOpen(true)}
-        aria-label="Open menu"
-        className="hamburger-btn"
+      {/* ── Mobile Topbar ── */}
+      <div
+        className="mobile-topbar"
         style={{
           position: 'fixed',
-          top: '1rem',
-          left: '1rem',
+          top: 0, left: 0, right: 0,
+          height: '4rem',
+          backgroundColor: 'var(--bg-card)',
+          borderBottom: '1px solid var(--border)',
           zIndex: 1000,
           display: 'none',
           alignItems: 'center',
-          justifyContent: 'center',
-          width: '2.25rem',
-          height: '2.25rem',
-          borderRadius: '0.5rem',
-          border: '1px solid var(--sidebar-border)',
-          backgroundColor: 'var(--sidebar-bg)',
-          color: 'var(--sidebar-text)',
-          cursor: 'pointer',
+          padding: '0 1rem',
+          justifyContent: 'space-between',
         }}
       >
-        <Menu size={18} />
-      </button>
+        <button
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open menu"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '2.25rem',
+            height: '2.25rem',
+            borderRadius: '0.5rem',
+            border: '1px solid var(--sidebar-border)',
+            backgroundColor: 'var(--sidebar-bg)',
+            color: 'var(--sidebar-text)',
+            cursor: 'pointer',
+          }}
+        >
+          <Menu size={18} />
+        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Zap size={16} style={{ color: 'var(--accent)' }} />
+          <span style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '1rem', color: 'var(--accent)', letterSpacing: '-0.02em' }}>
+            StartupManager
+          </span>
+        </div>
+        <div style={{ width: '2.25rem' }} /> {/* Spacer to balance flex layout */}
+      </div>
 
       {/* ── Desktop sidebar ── */}
       <motion.aside
@@ -328,7 +346,7 @@ export default function Sidebar() {
       <style>{`
         @media (max-width: 768px) {
           .desktop-sidebar { display: none !important; }
-          .hamburger-btn   { display: flex !important; }
+          .mobile-topbar   { display: flex !important; }
         }
       `}</style>
     </>

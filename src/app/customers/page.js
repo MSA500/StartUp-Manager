@@ -117,7 +117,8 @@ export default function CustomersPage() {
       </div>
 
       <div className="card">
-        <table style={{ width: '100%' }}>
+        <div className="table-responsive">
+          <table style={{ width: '100%' }}>
           <thead>
             <tr>
               <th className="table-head">Name</th>
@@ -151,6 +152,7 @@ export default function CustomersPage() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
     </motion.div>
   )

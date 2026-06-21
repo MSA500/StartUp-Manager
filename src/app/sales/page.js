@@ -131,7 +131,8 @@ export default function SalesPage() {
       </AnimatePresence>
 
       <div className="card">
-        <table style={{ width: '100%' }}>
+        <div className="table-responsive">
+          <table style={{ width: '100%' }}>
           <thead>
             <tr>
               <th className="table-head">Customer</th>
@@ -158,6 +159,7 @@ export default function SalesPage() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
     </motion.div>
   )

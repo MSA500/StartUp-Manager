@@ -81,24 +81,26 @@ export default function DashboardPage() {
           {recentSales.length === 0 ? (
             <p className="meta-text">No sales yet.</p>
           ) : (
-            <table style={{ width: '100%' }}>
-              <thead>
-                <tr>
-                  <th className="table-head">Customer</th>
-                  <th className="table-head">Date</th>
-                  <th className="table-head">Amount</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recentSales.map(s => (
-                  <tr key={s.buyid} className="table-row">
-                    <td className="table-cell" style={{ fontWeight: 500, color: 'var(--text)' }}>{s.customer?.name}</td>
-                    <td className="table-cell">{s.date}</td>
-                    <td className="table-cell" style={{ color: '#10b981', fontWeight: 600 }}>PKR {s.totalamount?.toLocaleString()}</td>
+            <div className="table-responsive">
+              <table style={{ width: '100%' }}>
+                <thead>
+                  <tr>
+                    <th className="table-head">Customer</th>
+                    <th className="table-head">Date</th>
+                    <th className="table-head">Amount</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {recentSales.map(s => (
+                    <tr key={s.buyid} className="table-row">
+                      <td className="table-cell" style={{ fontWeight: 500, color: 'var(--text)' }}>{s.customer?.name}</td>
+                      <td className="table-cell">{s.date}</td>
+                      <td className="table-cell" style={{ color: '#10b981', fontWeight: 600 }}>PKR {s.totalamount?.toLocaleString()}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
       </motion.div>

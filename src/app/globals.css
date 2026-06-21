@@ -159,6 +159,11 @@
     text-transform: uppercase;
   }
 
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   .table-head {
     text-align: left;
     font-size: 0.68rem;
@@ -168,6 +173,7 @@
     font-weight: 600;
     padding: 0 0 0.75rem 0;
     border-bottom: 1px solid var(--table-border);
+    white-space: nowrap;
   }
   .table-row {
     border-bottom: 1px solid var(--table-border);
@@ -178,6 +184,7 @@
     padding: 0.875rem 1rem 0.875rem 0;
     font-size: 0.875rem;
     color: var(--text-secondary);
+    white-space: nowrap;
   }
 
   .page-title {
@@ -202,12 +209,5 @@
   .meta-text {
     font-size: 0.8rem;
     color: var(--text-muted);
-  }
-}
-
-/* ── Mobile responsiveness ── */
-@media (max-width: 768px) {
-  .app-main-content {
-    padding-top: 4rem !important; /* clear the fixed hamburger button */
   }
 }
