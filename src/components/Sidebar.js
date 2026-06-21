@@ -8,12 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
-  { href: '/dashboard',   label: 'Dashboard',   Icon: LayoutDashboard },
-  { href: '/employees',   label: 'Employees',   Icon: Users },
+  { href: '/dashboard', label: 'Dashboard', Icon: LayoutDashboard },
+  { href: '/employees', label: 'Employees', Icon: Users },
   { href: '/departments', label: 'Departments', Icon: Building2 },
-  { href: '/customers',   label: 'Customers',   Icon: UserCheck },
-  { href: '/products',    label: 'Products',    Icon: Package },
-  { href: '/sales',       label: 'Sales',       Icon: ShoppingCart },
+  { href: '/customers', label: 'Customers', Icon: UserCheck },
+  { href: '/products', label: 'Products', Icon: Package },
+  { href: '/sales', label: 'Sales', Icon: ShoppingCart },
 ]
 
 const sidebarVariants = {
